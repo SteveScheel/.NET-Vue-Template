@@ -9,7 +9,12 @@
   "author": "Steve Scheel",
   "license": "MIT",
   "devDependencies": {
+    "aspnet-prerendering": "^3.0.1",
     "aspnet-webpack": "^2.0.1",
     "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "vue": "^2.5.13",
+    "vue-server-renderer": "^2.5.13"
   }
 }

@@ -1,9 +1,5 @@
 const aspnetRenderer = require('aspnet-prerendering')
-// Have a vue instance to run
-const Vue = require('vue');
-const app = new Vue({
-    template: `<h1>Hello from Vue JS!</h1>`
-});
+const createApp = require('./app');
 
 // Create the renderer
 const vueRenderer = require('vue-server-renderer').createRenderer();
@@ -11,6 +7,9 @@ const vueRenderer = require('vue-server-renderer').createRenderer();
 // Render the instance using aspnet's renderer
 module.exports = aspnetRenderer.createServerRenderer(function(params){
     return new Promise(function(resolve, reject) {
+        const context = { url: params.url };
+        const app = createApp(context);
+        
         vueRenderer.renderToString(app)
             .then(html => {
                 resolve({

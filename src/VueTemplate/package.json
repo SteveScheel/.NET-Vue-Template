@@ -1,0 +1,15 @@
+{
+  "name": "aspnet-core-vue-template",
+  "version": "0.0.1",
+  "description": "A template for using Vue ssr'd with .netcore 2 background",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steve Scheel",
+  "license": "MIT",
+  "devDependencies": {
+    "aspnet-webpack": "^2.0.1",
+    "webpack": "^3.10.0"
+  }
+}

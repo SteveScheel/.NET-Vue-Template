@@ -14,7 +14,7 @@ namespace VueTemplate.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        [HttpGet("[action]")]
+        [HttpGet("[action]/{startDateIndex}")]
         public IEnumerable<WeatherForecast> WeatherForecasts(int startDateIndex)
         {
             var rng = new Random();

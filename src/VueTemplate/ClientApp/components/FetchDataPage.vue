@@ -13,9 +13,13 @@
         <FetchDataRow v-for="(row, index) in days" :day="row" :key="index" />
       </tbody>
     </table>
-    <div class="row">
-      <button @click="changeDaysAhead(-5)" class="btn btn-primary">Prev</button>
-      <button @click="changeDaysAhead(5)" class="btn btn-primary">Next</button>
+    <div class="clearfix">
+      <div class="pull-left">
+        <button id="prevButton" @click="changeDaysAhead(-5)" class="btn btn-primary">Prev</button>
+      </div>
+      <div class="pull-right">
+        <button id="nextButton" @click="changeDaysAhead(5)" class="btn btn-primary">Next</button>
+      </div>
     </div>
   </div>
 </template>
